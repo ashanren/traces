@@ -1,0 +1,6 @@
+{
+  "name": "archiver",
+  "dockerComposeFile": ["docker-compose.yml"],
+  "service": "dev",
+  "workspaceFolder": "/opt/app"
+}

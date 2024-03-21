@@ -1,0 +1,21 @@
+services:
+  dev:
+    build:
+      context: .
+      target: dev
+    image: archiver:dev
+    container_name: archiver
+    restart: always
+    networks:
+      - archiver_net
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./../:/opt/app
+      - /traces:/traces
+networks:
+  archiver_net:
+    name: archiver_net
+    driver: bridge
+    driver_opts:
+      com.docker.network.bridge.name: archiver_net

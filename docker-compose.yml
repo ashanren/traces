@@ -3,7 +3,7 @@ services:
     image: trace
     build:
       context: .
-      target: trace
+      target: tracer
     restart: unless-stopped
     stdin_open: true
     network_mode: host
@@ -11,6 +11,9 @@ services:
     cap_add:
       - NET_RAW
       - NET_ADMIN
+    volumes:
+      - /traces:/traces
+#    environment:
     logging:
       driver: "json-file"
       options:

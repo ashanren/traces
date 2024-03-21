@@ -7,4 +7,4 @@ Need to add a way to archive traces so the root dir only show the traces of the 
 - [x] Add trace
 - [x] Configurable file rotation
 - [ ] Add configurable archiving
-- [] Add GUI
+- [ ] Add GUI
